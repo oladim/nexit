@@ -1,5 +1,5 @@
 // src/components/Candidate.js
- import nextitLogo from '../assets/images/nexitlogo.png';
+ //import nextitLogo from '../assets/images/nexitlogo.png';
 // function Candidate() {
 //   return (
 //     <div className="border h-20 flex items-center">
@@ -119,8 +119,9 @@ export default function Candidate() {
                 <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center">
                   <Upload className="w-6 h-6 text-gray-600" />
                 </div>
-                <div>
+                <div className='flex items-center'>
                   <p className="font-medium">Registration Completed and CV uploaded Successfully</p>
+                  <div className='border-r h-9 mx-4 border-r-[#000]'></div>
                   <p className="text-sm text-gray-500">Waiting for approval from the Admin</p>
                 </div>
               </div>
