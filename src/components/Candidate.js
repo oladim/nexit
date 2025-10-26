@@ -1,17 +1,3 @@
-// src/components/Candidate.js
- //import nextitLogo from '../assets/images/nexitlogo.png';
-// function Candidate() {
-//   return (
-//     <div className="border h-20 flex items-center">
-//       <div className="border">
-//         <img src={nextitLogo} alt="nextit Logo" className='w-[170px]'/>
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default Candidate;
-
 import React, { useState } from 'react';
 import { Search, Bell, ChevronDown, ChevronLeft, ChevronRight, Calendar, Upload, BookOpen, MessageSquare, User, Settings, LogOut, Menu } from 'lucide-react';
 import Header from './header';
@@ -100,7 +86,7 @@ export default function Candidate() {
                     <input 
                       type="text" 
                       placeholder="Search"
-                      className="pl-10 pr-4 py-2 border border-gray-300 rounded-lg w-64 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="pl-10 pr-4 py-2 border border-gray-300 rounded-xl w-64 focus:outline-none focus:ring-2 focus:ring-blue-500"
                     />
                   </div>
             
@@ -130,54 +116,59 @@ export default function Candidate() {
               </button>
             </div>
 
-            <div className="grid grid-cols-3 gap-6 mb-6">
-              {/* Stats Cards */}
-              {stats.map((stat, idx) => (
-                <div key={idx} className={`${stat.bg} rounded-lg p-6`}>
-                  <p className="text-sm text-gray-600 mb-2">{stat.label}</p>
-                  <p className="text-4xl font-bold">{stat.value}</p>
-                </div>
-              ))}
-            </div>
-
-            <div className="grid grid-cols-3 gap-6">
-              {/* Skill Match Ratio */}
-              <div className="bg-white rounded-lg p-6 border border-gray-200">
-                <h3 className="font-semibold mb-4">Skill Match Ratio</h3>
-                <div className="relative w-40 h-40 mx-auto">
-                  <svg className="w-full h-full" viewBox="0 0 100 100">
-                    <circle cx="50" cy="50" r="35" fill="none" stroke="#000" strokeWidth="15" strokeDasharray="110 220" transform="rotate(-90 50 50)" />
-                    <circle cx="50" cy="50" r="35" fill="none" stroke="#3B82F6" strokeWidth="15" strokeDasharray="150 220" transform="rotate(20 50 50)" />
-                  </svg>
-                </div>
-                <div className="mt-4 space-y-2">
-                  <div className="flex items-center justify-between text-sm">
-                    <div className="flex items-center gap-2">
-                      <div className="w-3 h-3 bg-blue-600 rounded-full"></div>
-                      <span>React</span>
-                    </div>
-                    <span className="font-medium">62.1%</span>
-                  </div>
-                  <div className="flex items-center justify-between text-sm">
-                    <div className="flex items-center gap-2">
-                      <div className="w-3 h-3 bg-black rounded-full"></div>
-                      <span>Intermediate</span>
-                    </div>
-                    <span className="font-medium">22.8%</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Score Distribution */}
-              <div className="bg-white rounded-lg p-6 border border-gray-200">
-                <h3 className="font-semibold mb-4">Candidate Score Distribution</h3>
-                <div className="flex items-end justify-around h-48 gap-2">
-                  {scoreDistribution.map((item, idx) => (
-                    <div key={idx} className="flex flex-col items-center flex-1">
-                      <div className={`w-full ${item.color} rounded-t`} style={{ height: `${item.value}%` }}></div>
-                      <span className="text-xs text-gray-600 mt-2">{item.label}</span>
+            <div className='flex justify-between w-full'>
+              {/* accessments */}
+              <div className='w-[75%]'>
+                <div className="grid grid-cols-3 gap-6 mb-6">
+                  {/* Stats Cards */}
+                  {stats.map((stat, idx) => (
+                    <div key={idx} className={`${stat.bg} rounded-lg p-6`}>
+                      <p className="text-sm text-gray-600 mb-2">{stat.label}</p>
+                      <p className="text-4xl font-bold">{stat.value}</p>
                     </div>
                   ))}
+                </div>
+
+                <div className="grid grid-cols-2 gap-6">
+                  {/* Skill Match Ratio */}
+                  <div className="bg-white rounded-lg p-6 border border-gray-200">
+                    <h3 className="font-semibold mb-4">Skill Match Ratio</h3>
+                    <div className="relative w-40 h-40 mx-auto">
+                      <svg className="w-full h-full" viewBox="0 0 100 100">
+                        <circle cx="50" cy="50" r="35" fill="none" stroke="#000" strokeWidth="15" strokeDasharray="110 220" transform="rotate(-90 50 50)" />
+                        <circle cx="50" cy="50" r="35" fill="none" stroke="#3B82F6" strokeWidth="15" strokeDasharray="150 220" transform="rotate(20 50 50)" />
+                      </svg>
+                    </div>
+                    <div className="mt-4 space-y-2">
+                      <div className="flex items-center justify-between text-sm">
+                        <div className="flex items-center gap-2">
+                          <div className="w-3 h-3 bg-blue-600 rounded-full"></div>
+                          <span>React</span>
+                        </div>
+                        <span className="font-medium">62.1%</span>
+                      </div>
+                      <div className="flex items-center justify-between text-sm">
+                        <div className="flex items-center gap-2">
+                          <div className="w-3 h-3 bg-black rounded-full"></div>
+                          <span>Intermediate</span>
+                        </div>
+                        <span className="font-medium">22.8%</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Score Distribution */}
+                  <div className="bg-white rounded-lg p-6 border border-gray-200 h-full">
+                    <h3 className="font-semibold mb-4">Candidate Score Distribution</h3>
+                    <div className="flex items-end justify-around h-48 gap-2">
+                      {scoreDistribution.map((item, idx) => (
+                        <div key={idx} className="h-full flex justify-end flex-col items-center flex-1">
+                          <div className={`w-full ${item.color} rounded-xl mb-1`} style={{ height: `${item.value}%` }} ></div>
+                          <span className="text-xs text-gray-600 mt-2">{item.label}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               </div>
 
@@ -213,6 +204,9 @@ export default function Candidate() {
                 </div>
               </div>
             </div>
+            
+
+            
 
             {/* Available Jobs */}
             <div className="bg-white rounded-lg p-6 mt-6 border border-gray-200">
