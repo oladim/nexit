@@ -235,7 +235,7 @@ function Landing() {
           <h1 className="font-poppins font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-[56px] leading-tight lg:leading-[67.2px] align-middle tracking-normal max-w-full lg:max-w-[653px] opacity-100 rotate-0">
             Discover, Train, <br /> and Recruit Top Talent <br /> Seamlessly
           </h1> 
-          <p className="font-poppins font-normal text-base sm:text-lg leading-relaxed lg:leading-[27px] align-middle tracking-normal max-w-full lg:max-w-[542px] opacity-100 rotate-0">
+          <p className="animate-pulse font-poppins font-normal text-base sm:text-lg leading-relaxed lg:leading-[27px] align-middle tracking-normal max-w-full lg:max-w-[542px] opacity-100 rotate-0">
             Secure your future in AI automation by using our platform
             to go from initial screening to job placement through intelligent assessments,
             certified training, and verified talent matching.
@@ -244,12 +244,12 @@ function Landing() {
           {/* Buttons */}
           <div className="flex gap-4 lg:gap-[19px] opacity-100 rotate-0">
             <button
-              className="w-full sm:w-[144px] h-[56px] opacity-100 rotate-0 px-[16px] py-[10px] rounded-[8px] bg-gradient-to-r from-[#007BFF] to-[#1C1F2A] animate-bounce transition duration-300 hover:scale-105 shadow-lg"
+              className="w-full sm:w-[144px] h-[56px] opacity-100 rotate-0 px-[16px] py-[10px] rounded-[8px] bg-gradient-to-r from-[#007BFF] to-[#1C1F2A] transition duration-300 hover:scale-105 shadow-lg"
               onClick={() => {navigate("/automation")}}
               style={{ animationDuration: "1.5s" }}
             >
               <p className="w-full  opacity-100 rotate-0 font-poppins font-medium text-[16px] leading-[16px] tracking-[0.4px] text-center align-middle text-[#FAFAFA] flex items-center justify-center gap-2">
-                <span className="inline-block animate-pulse">🚀</span>
+                <span className="inline-block">🚀</span>
                 Get Started
               </p>
             </button>

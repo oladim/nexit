@@ -9,21 +9,24 @@ function AutomationTraining() {
       title: "AI Automation Fundamentals",
       duration: "Day 1",
       icon: "🤖",
-      topics: ["AI Automation Overview", "Use Cases & Applications", "Automation Strategy & Planning"]
+      topics: ["AI Automation Overview", "Use Cases & Applications", "Automation Strategy & Planning"],
+      isAvailable: true,
     },
     {
       id: 2,
       title: "Workflows & Process Design",
       duration: "Day 2",
       icon: "🔧",
-      topics: ["Workflow Architecture", "Process Mapping", "Automation Tools & Platforms"]
+      topics: ["Workflow Architecture", "Process Mapping", "Automation Tools & Platforms"],
+      isAvailable: true,
     },
     {
       id: 3,
       title: "AI Agents Development",
       duration: "Day 3",
       icon: "🧠",
-      topics: ["Building AI Agents", "Agent Integration", "Deployment & Optimization"]
+      topics: ["Building AI Agents", "Agent Integration", "Deployment & Optimization"],
+      isAvailable: false,
     }
   ];
 
@@ -88,7 +91,7 @@ function AutomationTraining() {
               <span className="text-3xl">📍</span>
             </div>
             <h3 className="font-poppins font-semibold text-lg sm:text-xl mb-2">Location</h3>
-            <p className="text-gray-600 text-sm sm:text-base">Hybrid: Online & Abuja Hub</p>
+            <p className="text-gray-600 text-sm sm:text-base">Hybrid: Online & Ibadan Hub</p>
           </div>
           <div className="text-center sm:col-span-2 lg:col-span-1">
             <div className="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -107,9 +110,9 @@ function AutomationTraining() {
               <div
                 key={module.id}
                 onClick={() => setSelectedModule(module.id === selectedModule ? null : module.id)}
-                className="bg-white border-2 border-gray-200 rounded-2xl p-4 sm:p-6 hover:border-blue-600 cursor-pointer transition-all"
+                className={`${!module.isAvailable ? "cursor-not-allowed bg-gray-200" : "bg-white"} border-2 border-gray-200 rounded-2xl p-4 sm:p-6 hover:border-blue-600 cursor-pointer transition-all`}
               >
-                <div className="flex items-start gap-3 sm:gap-4">
+                <div className={` flex items-start gap-3 sm:gap-4`}>
                   <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-r from-blue-600 to-gray-900 rounded-xl flex items-center justify-center flex-shrink-0">
                     <span className="text-xl sm:text-2xl">{module.icon}</span>
                   </div>
@@ -126,6 +129,11 @@ function AutomationTraining() {
                             </li>
                           ))}
                         </ul>
+                        <div className='pt-3'>
+                        <button onClick={() => console.log("clikced")} disabled={!module.isAvailable} className={`${module.isAvailable ? " bg-blue-600 hover:bg-blue-700" : "bg-slate-500 hover:bg-slate-600"}  text-white rounded-lg px-4 sm:px-6 py-2  text-sm sm:text-base`}>
+                          Enroll
+                        </button>
+                        </div>
                       </div>
                     )}
                   </div>
