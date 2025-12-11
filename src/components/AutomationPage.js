@@ -128,7 +128,7 @@ function AutomationTraining() {
                     <h3 className="font-poppins font-semibold text-lg sm:text-xl mb-2">{module.title}</h3>
                     <p className="text-gray-600 mb-3 text-sm sm:text-base">Goal: {module.duration}</p>
                     {selectedModule === module.id && (
-                      <div className="border mt-4 pt-4 border-t border-gray-200">
+                      <div className="mt-4 pt-4 border-t border-gray-200">
                         <p className="font-medium mb-2 text-sm sm:text-base">Topics Covered:</p>
                         <ul className="space-y-1">
                           {module.topics.map((topic, idx) => (
