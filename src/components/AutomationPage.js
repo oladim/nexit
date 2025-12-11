@@ -6,26 +6,34 @@ function AutomationTraining() {
   const trainingModules = [
     {
       id: 1,
-      title: "AI Automation Fundamentals",
-      duration: "Day 1",
+      title: "AI Automation Foundation (Beginner Level",
+      duration: "Build strong fundamentals in AI, automation tools, prompt engineering, and workflow automation.",
       icon: "🤖",
-      topics: ["AI Automation Overview", "Use Cases & Applications", "Automation Strategy & Planning"],
+      topics: ["Introduction to AI & Automation", "Understanding Large Language Models (LLMs)", "Prompt Engineering Fundamentals", "No-Code/Low-Code Automation Tools", "Data Fundamentals"],
       isAvailable: true,
     },
     {
       id: 2,
-      title: "Workflows & Process Design",
-      duration: "Day 2",
+      title: "AI Automation Intermediate",
+      duration: "Develop practical automation skills, build smarter workflows, integrate APIs, and handle logic-based automations.",
       icon: "🔧",
-      topics: ["Workflow Architecture", "Process Mapping", "Automation Tools & Platforms"],
-      isAvailable: true,
+      topics: ["Intermediate Prompt Engineering", "Building Multi-Step Automations", "AI Agents & Task Automation", "Working with APIs", "Automation Orchestration", "Error Handling & Logging"],
+      isAvailable: false,
     },
     {
       id: 3,
-      title: "AI Agents Development",
-      duration: "Day 3",
+      title: "AI Automation Advanced",
+      duration: "Build enterprise-grade automations with long-context models, vector databases, RAG, multi-agent systems, and robust workflow architectures.",
       icon: "🧠",
-      topics: ["Building AI Agents", "Agent Integration", "Deployment & Optimization"],
+      topics: ["Advanced Prompt Engineering", "Building RAG Systems", "AI Multi-Agent Systems", "Building Scalable Automations", "Integrating LLMs with Backend Systems", "Monitoring & Optimization"],
+      isAvailable: false,
+    },
+    {
+      id: 4,
+      title: "AI Engineering (Expert Level)",
+      duration: "Transition learners from automation builders to AI engineers capable of building AI-native systems, custom pipelines, and production AI services.",
+      icon: "🔩",
+      topics: ["AI Engineering Fundamentals", "Building Custom AI Services", "LLM Tool Calling & Function Calling", "Fine-Tuning Models", "Enterprise-Grade Deployment", "AI Performance Optimization"],
       isAvailable: false,
     }
   ];
@@ -110,7 +118,7 @@ function AutomationTraining() {
               <div
                 key={module.id}
                 onClick={() => setSelectedModule(module.id === selectedModule ? null : module.id)}
-                className={`${!module.isAvailable ? "cursor-not-allowed bg-gray-200" : "bg-white"} border-2 border-gray-200 rounded-2xl p-4 sm:p-6 hover:border-blue-600 cursor-pointer transition-all`}
+                className={`${!module.isAvailable ? "cursor-not-allowed bg-gray-200" : "bg-white"} ${selectedModule !== module.id ? "h-[160px]" : null} border-2 border-gray-200 rounded-2xl p-4 sm:p-6 hover:border-blue-600 cursor-pointer transition-all`}
               >
                 <div className={` flex items-start gap-3 sm:gap-4`}>
                   <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-r from-blue-600 to-gray-900 rounded-xl flex items-center justify-center flex-shrink-0">
@@ -118,9 +126,9 @@ function AutomationTraining() {
                   </div>
                   <div className="flex-1 min-w-0">
                     <h3 className="font-poppins font-semibold text-lg sm:text-xl mb-2">{module.title}</h3>
-                    <p className="text-gray-600 mb-3 text-sm sm:text-base">Duration: {module.duration}</p>
+                    <p className="text-gray-600 mb-3 text-sm sm:text-base">Goal: {module.duration}</p>
                     {selectedModule === module.id && (
-                      <div className="mt-4 pt-4 border-t border-gray-200">
+                      <div className="border mt-4 pt-4 border-t border-gray-200">
                         <p className="font-medium mb-2 text-sm sm:text-base">Topics Covered:</p>
                         <ul className="space-y-1">
                           {module.topics.map((topic, idx) => (
