@@ -64,7 +64,7 @@ function AutomationTraining() {
       </nav>
 
       {/* Hero Section */}
-      <div className="px-4 sm:px-6 lg:px-10 py-12 sm:py-16 bg-gradient-to-r from-blue-600 to-gray-900">
+      <div className="px-4 sm:px-6 lg:px-10 py-12 sm:py-16 bg-gradient-to-r from-blue-600 to-blue-600">
         <div className="max-w-6xl mx-auto">
           <h1 className="font-poppins font-semibold text-3xl sm:text-4xl lg:text-5xl text-white mb-4 sm:mb-6">
             AI Automation Training Program
@@ -121,7 +121,7 @@ function AutomationTraining() {
                 className={`${!module.isAvailable ? "cursor-not-allowed bg-gray-200" : "bg-white"} ${selectedModule !== module.id ? "h-[160px]" : null} border-2 border-gray-200 rounded-2xl p-4 sm:p-6 hover:border-blue-600 cursor-pointer transition-all`}
               >
                 <div className={` flex items-start gap-3 sm:gap-4`}>
-                  <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-r from-blue-600 to-gray-900 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-r from-blue-600 to-blue-600 rounded-xl flex items-center justify-center flex-shrink-0">
                     <span className="text-xl sm:text-2xl">{module.icon}</span>
                   </div>
                   <div className="flex-1 min-w-0">
@@ -267,7 +267,7 @@ function AutomationTraining() {
         </div>
 
         {/* CTA Section */}
-        <div className="text-center bg-gradient-to-r from-blue-600 to-gray-900 rounded-2xl p-12 text-white">
+        <div className="text-center bg-gradient-to-r from-blue-600 to-blue-600 rounded-2xl p-12 text-white">
           <h2 className="font-poppins font-semibold text-4xl mb-4">Ready to Transform Your Career?</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
             Join professionals mastering AI automation, workflows, and intelligent agents in this intensive 3-day program.
