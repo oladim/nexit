@@ -6,7 +6,7 @@ function AutomationTraining() {
   const trainingModules = [
     {
       id: 1,
-      title: "AI Automation Foundation (Beginner Level",
+      title: "AI Automation Foundation (Beginner Level)",
       duration: "Build strong fundamentals in AI, automation tools, prompt engineering, and workflow automation.",
       icon: "🤖",
       topics: ["Introduction to AI & Automation", "Understanding Large Language Models (LLMs)", "Prompt Engineering Fundamentals", "No-Code/Low-Code Automation Tools", "Data Fundamentals"],
