@@ -32,7 +32,7 @@ export default function ProcessFlow() {
       <h3 className="font-poppins font-normal text-[10px] leading-[100%] align-middle">Last 30 days</h3>
      </div>
      <div className="h-auto md:h-[106px] flex items-end gap-2 w-full md:w-[198px] mt-5">
-      <div className="h-auto md:h-[106px] flex items-end gap-2 w-full md:w-[198px] opacity-100 gap-[21px]">
+      <div className="h-auto md:h-[106px] flex items-end w-full md:w-[198px] opacity-100 gap-[21px]">
         <div className="bg-gradient-to-r from-[#007BFF] to-[#1C1F2A] bg-blue-400 w-2 h-12"></div>
         <div className="bg-gradient-to-r from-[#007BFF] to-[#1C1F2A] bg-blue-500 w-2 h-20"></div>
         <div className="bg-gradient-to-r from-[#007BFF] to-[#1C1F2A] bg-blue-600 w-2 h-16"></div>
@@ -73,7 +73,7 @@ export default function ProcessFlow() {
   <div className="flex">
   <div className="flex flex-col justify-center w-[156px] h-[76px] gap-[28px] opacity-100 rotate-0 font-poppins font-semibold text-[16px] leading-[100%] tracking-[0%] text-center align-middle">
     <span className="flex items-center gap-1">
-      <span className="bg-[#1C1F2A] w-3 h-3 bg-gray-500 inline-block rounded"></span> <span className="font-poppins font-semibold text-[16px] text-center text-[#1C1F2A]">Income CV</span>
+      <span className="bg-[#1C1F2A] w-3 h-3 inline-block rounded"></span> <span className="font-poppins font-semibold text-[16px] text-center text-[#1C1F2A]">Income CV</span>
     </span>
     <span className="flex items-center gap-1">
       <span className="w-3 h-3 bg-red-500 inline-block rounded"></span> <span className="font-poppins font-semibold text-[16px] leading-[100%] tracking-[0%] text-center align-middle text-[#1C1F2A]">Rejected CV</span>
@@ -153,7 +153,7 @@ export default function ProcessFlow() {
             </div>
 
             <div className="opacity-100 rotate-0 flex flex-col sm:flex-row gap-[60px]">
-              <div className="flex flex-col w-[280px] h-[153px] opacity-100 rotate-0 flex gap-[17px]">
+              <div className="flex flex-col w-[280px] h-[153px] opacity-100 rotate-0 gap-[17px]">
                 <span className="flex items-center justify-center w-[46px] h-[46px] opacity-100 rotate-0 rounded-[8px] bg-[#EDEBFB]">
                    <img
                     src={analysis}
