@@ -211,48 +211,25 @@ export default function ProcessFlow() {
               </div>
 
               {/* CV Status Box */}
-
-{/* 
-              <div className="flex flex-col w-[475px] h-[207px] gap-[10px] rounded-[20px] pt-[9px] pr-[16px] pb-[9px] pl-[16px] bg-[#D6DBDF]">
-      <h4 className="w-[442px] h-[24px] font-poppins font-medium text-[16px] leading-[100%] tracking-[0%] align-middle">
-        CV Status Update
-      </h4>
-      <ul className="space-y-2 text-sm">
-        <li className="flex w-[442px] h-[35px] gap-[33px]">
-          <span>Ann Peterson</span><span>12 May, 2025</span><span>Doc.fmt</span><span className="text-yellow-500">Under Review</span>
-        </li>
-        <li className="flex w-[442px] h-[35px] gap-[33px]">
-          <span>Ann Peterson</span><span>12 May, 2025</span><span>Doc.fmt</span><span className="text-green-500">Accepted</span>
-        </li>
-        <li className="flex w-[442px] h-[35px] gap-[33px]">
-          <span>Ann Peterson</span><span>12 May, 2025</span><span>Doc.fmt</span><span className="text-yellow-500">Under Review</span>
-        </li>
-        <li className="flex w-[442px] h-[35px] gap-[33px]">
-          <span>Ann Peterson</span><span>12 May, 2025</span><span>Doc.fmt</span><span className="text-red-500">Declined</span>
-        </li>
-      </ul>
-    </div> */}
-
-
-              {/* <div className="hidden sm:flex flex-col w-full h-[207px] gap-[10px] rounded-[20px] pt-[9px] pr-[16px] pb-[9px] pl-[16px] bg-[#D6DBDF]">
+              <div className="hidden sm:flex flex-col w-full h-[207px] gap-[10px] rounded-[20px] pt-[9px] pr-[16px] pb-[9px] pl-[16px] bg-[#D6DBDF]">
                 <h4 className="w-[442px] h-[24px] font-poppins font-medium text-[16px] leading-[100%] tracking-[0%] align-middle">
                   CV Status Update
                 </h4>
                 <ul className="space-y-2 text-sm">
-                  <li className="flex justify-between items-center py-1 gap-4">
-                    <span className="truncate">Ann Peterson</span><span className="text-sm text-gray-500">12 May, 2025</span><span>Doc.fmt</span><span className="text-yellow-500">Under Review</span>
+                  <li className="flex w-[442px] h-[35px] gap-[33px]">
+                    <span>Ann Peterson</span><span>12 May, 2025</span><span>Doc.fmt</span><span className="text-yellow-500">Under Review</span>
                   </li>
-                  <li className="flex justify-between items-center py-1 gap-4">
-                    <span className="truncate">Ann Peterson</span><span className="text-sm text-gray-500">12 May, 2025</span><span>Doc.fmt</span><span className="text-green-500">Accepted</span>
+                  <li className="flex w-[442px] h-[35px] gap-[33px]">
+                    <span>Ann Peterson</span><span>12 May, 2025</span><span>Doc.fmt</span><span className="text-green-500">Accepted</span>
                   </li>
-                  <li className="flex justify-between items-center py-1 gap-4">
-                    <span className="truncate">Ann Peterson</span><span className="text-sm text-gray-500">12 May, 2025</span><span>Doc.fmt</span><span className="text-yellow-500">Under Review</span>
+                  <li className="flex w-[442px] h-[35px] gap-[33px]">
+                    <span>Ann Peterson</span><span>12 May, 2025</span><span>Doc.fmt</span><span className="text-yellow-500">Under Review</span>
                   </li>
-                  <li className="flex justify-between items-center py-1 gap-4">
-                    <span className="truncate">Ann Peterson</span><span className="text-sm text-gray-500">12 May, 2025</span><span>Doc.fmt</span><span className="text-red-500">Declined</span>
+                  <li className="flex w-[442px] h-[35px] gap-[33px]">
+                    <span>Ann Peterson</span><span>12 May, 2025</span><span>Doc.fmt</span><span className="text-red-500">Declined</span>
                   </li>
                 </ul>
-              </div> */}
+              </div>
             </div>
           </div>
         </div>
