@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Search, Bell, ChevronDown } from 'lucide-react';
+import { Search, Bell, ChevronDown, Menu, X } from 'lucide-react';
 import nextitLogo from '../assets/images/nexitlogo.png';
-import avater from '../assets/images/avater.png'
+import avater from '../assets/images/avater.png' 
 
 const Header = ({ 
   logo = nextitLogo,
@@ -25,37 +25,32 @@ const Header = ({
 //     }
 //   };
 
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   return (
-    <header className="bg-white border-b border-gray-200 px-8 py-4 fixed w-full top-0 left-0 z-50">
-      <div className="flex items-center justify-between max-w-full">
+    <header className="bg-white border-b border-gray-200 px-4 sm:px-8 py-4 fixed w-full top-0 left-0 z-50">
+      <div className="flex items-center justify-between max-w-full gap-4">
         {/* Left Section - Logo and Candidate Info */}
-        <div className="flex items-center justify-between w-[32%] min-w-fit gap-8">
+        <div className="flex items-center gap-4 w-full sm:w-auto min-w-0">
           <div className="flex-shrink-0">
             <img 
               src={logo} 
               alt="NextIT Logo" 
-              className="w-[170px] h-auto object-contain"
+              className="w-36 md:w-[170px] h-auto object-contain"
             />
           </div>
-          
-          <div>
+
+          <div className="hidden sm:block">
             <h1 className="text-2xl font-bold text-gray-900">{candidateName}</h1>
             <p className="text-sm text-gray-500 mt-1">{candidateRole}</p>
           </div>
         </div>
 
-        {/* Right Section - Search, Notifications, Profile */}
-        <div className="flex items-center gap-4">
+        {/* Desktop Right Section - Search, Notifications, Profile */}
+        <div className="hidden md:flex items-center gap-4">
           {/* Search Bar */}
           <div className="bg-[#F7F7F7] p-2 rounded-lg flex items-center text-[#000]">
             <Search className="w-5 h-5 pointer-events-none text-[#000]" />
-            {/* <input 
-              type="text"
-              value={searchQuery}
-              onChange={handleSearch}
-              placeholder="Search"
-              className="pl-10 pr-4 py-2 border border-gray-300 rounded-lg w-64 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
-            /> */}
           </div>
 
           {/* Notification Button */}
@@ -109,6 +104,47 @@ const Header = ({
             )}
           </div>
         </div>
+
+        {/* Mobile hamburger */}
+        <div className="flex items-center md:hidden">
+          <button
+            aria-label="Open menu"
+            aria-expanded={mobileMenuOpen}
+            onClick={() => setMobileMenuOpen(true)}
+            className="p-2 rounded-md bg-[#F7F7F7]"
+          >
+            <Menu className="w-6 h-6" />
+          </button>
+        </div>
+
+        {/* Mobile slide-out menu */}
+        {mobileMenuOpen && (
+          <div className="fixed inset-0 z-50 pt-16">
+            <div className="absolute inset-0 bg-black bg-opacity-40" onClick={() => setMobileMenuOpen(false)} aria-hidden="true" />
+            <div className="absolute top-0 right-0 w-full max-w-xs h-full bg-white shadow-lg p-4 overflow-auto">
+              <div className="flex items-center justify-between mb-4">
+                <img src={logo} alt="logo" className="w-32 h-auto" />
+                <button aria-label="Close menu" onClick={() => setMobileMenuOpen(false)} className="p-2 rounded-md">
+                  <X className="w-6 h-6" />
+                </button>
+              </div>
+
+              <nav className="space-y-2">
+                <a href="#home" className="block px-3 py-2 rounded hover:bg-gray-100">Home</a>
+                <a href="#about" className="block px-3 py-2 rounded hover:bg-gray-100">About us</a>
+                <a href="#how" className="block px-3 py-2 rounded hover:bg-gray-100">How it Works</a>
+                <a href="#contact" className="block px-3 py-2 rounded hover:bg-gray-100">Contact</a>
+                <a href="#faqs" className="block px-3 py-2 rounded hover:bg-gray-100">FAQs</a>
+              </nav>
+
+              <div className="mt-6 border-t pt-4">
+                <a href="#profile" className="block px-3 py-2 rounded hover:bg-gray-100">View Profile</a>
+                <a href="#settings" className="block px-3 py-2 rounded hover:bg-gray-100">Settings</a>
+                <button className="block w-full text-left px-3 py-2 rounded text-red-600 hover:bg-red-50">Logout</button>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </header>
   );

@@ -31,16 +31,16 @@ export default function Candidate() {
   ];
 
   return (
-    <div className="flex h-screen bg-gray-50">
+    <div className="flex flex-col md:flex-row min-h-screen bg-gray-50">
       {/* Main Content */}
       <div className="flex-1 overflow-auto">
         {/* Header */}
         <Header />
 
         {/* Content */}
-        <div className='flex'>
-          <div className="w-64 bg-white border-r pt-[7%] border-gray-200 flex flex-col">
-            <nav className="flex-1 px-4 fixed h-full">
+        <div className='flex flex-col md:flex-row'>
+          <div className="w-full md:w-64 bg-white md:border-r pt-4 md:pt-[7%] border-gray-200 flex flex-col">
+            <nav className="flex-1 px-4 md:fixed md:h-full relative">
               <a href="#" className="flex items-center gap-3 px-4 py-3 text-blue-600 bg-blue-50 rounded-lg mb-2">
                 <Menu className="w-5 h-5" />
                 <span className="font-medium">Dashboard</span>
@@ -74,7 +74,7 @@ export default function Candidate() {
               </a>
             </nav>
           </div>
-          <div className="pt-[7%] w-full px-8 pb-8 py-4">
+          <div className="pt-[7%] w-full px-4 md:px-8 pb-8 py-4">
             <div className='pb-5'>
               <div className="flex items-center justify-between">
                 <div>
@@ -118,7 +118,7 @@ export default function Candidate() {
 
             <div className='flex justify-between w-full'>
               {/* accessments */}
-              <div className='w-[75%]'>
+              <div className='w-full md:w-3/4'>
                 <div className="grid grid-cols-3 gap-6 mb-6">
                   {/* Stats Cards */}
                   {stats.map((stat, idx) => (
