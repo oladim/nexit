@@ -35,6 +35,14 @@ function AutomationTraining() {
       icon: "🔩",
       topics: ["AI Engineering Fundamentals", "Building Custom AI Services", "LLM Tool Calling & Function Calling", "Fine-Tuning Models", "Enterprise-Grade Deployment", "AI Performance Optimization"],
       isAvailable: false,
+    },
+    {
+      id: 5,
+      title: "AI Powered Applications",
+      duration: "This course teaches learners how to design, build, and deploy modern applications enhanced with Artificial Intelligence.",
+      icon: "🔩",
+      topics: ["AI-Driven User Interfaces", "Chatbot Development & NLP", "Recommendation Engines", "Computer Vision Integration", "Real-time Data Processing", "User Experience with AI"],
+      isAvailable: false,
     }
   ];
 
@@ -287,7 +295,7 @@ function AutomationTraining() {
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-8 px-10">
         <div className="max-w-6xl mx-auto text-center">
-          <p className="text-gray-400">© 2025 NexIT. All rights reserved.</p>
+          <p className="text-gray-400">© 2026 NexIT. All rights reserved.</p>
         </div>
       </footer>
     </div>
